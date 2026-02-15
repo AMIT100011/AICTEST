@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background: #efe6ff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 60px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar img {
+    height: 50px;
+}
+
+.navbar nav a {
+    margin: 0 14px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #2d1b69;
+}
+
+.navbar nav a:hover {
+    color: #ff9800;
+}
+
+/* ===== HERO ===== */
+.hero {
+    width: 100%;
+    height: 350px;
+    margin-top: 115px; /* Clear fixed header */
+    background: url("../assets/PartnerImages/govtpartner-By5VF41h.jpg") center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Dark overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* Text container */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+/* Heading */
+.hero h1 {
+    color: #fff;
+    font-size: 52px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+.hero h1 span {
+    color: #ff9800;
+}
+
+
+/* ===== PARTNER GRID ===== */
+.partners-container {
+    padding: 60px 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    background: #f8f9ff;
+}
+
+/* ===== CARD ===== */
+.partner-card {
+    background: white;
+    border-radius: 18px;
+    padding: 30px 20px;
+    text-align: center;
+    border: 2px solid #e5e8ff;
+    transition: all 0.35s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.partner-card:hover {
+    transform: translateY(-8px);
+    border-color: #6a5cff;
+    box-shadow: 0 18px 35px rgba(106,92,255,0.25);
+}
+
+/* IMAGE SPACE */
+.partner-logo {
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.partner-logo img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* TITLE */
+.partner-card h3 {
+    font-size: 18px;
+    color: #2d1b69;
+    font-weight: 600;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #1e1e1e;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 8px 16px;
+    grid-template-columns: auto 1fr auto;
+    position: relative;
+  }
+
+  .logo-container {
+    flex-shrink: 0;
+    z-index: 1301;
+  }
+
+  .gov-logo-group {
+    display: flex;
+    position: absolute;
+    right: 76px;
+    top: 50%;
+    transform: translateY(-50%);
+    gap: 8px;
+    align-items: center;
+    z-index: 1200;
+  }
+
+  .gov-logo-group img {
+    height: 40px;
+    width: auto;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: relative;
+    z-index: 1300;
+    margin-left: auto;
+  }
+
+  .hero {
+    height: 220px;
+    margin-top: 105px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .partners-container {
+    padding: 40px 20px;
+    grid-template-columns: 1fr;
+  }
+  
+  .partner-card {
+    padding: 20px 15px;
+  }
+  
+  .partner-logo {
+    height: 100px;
+  }
+  
+  .partner-card h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 180px;
+    margin-top: 100px;
+  }
+  
+  .hero h1 {
+    font-size: 26px;
+  }
+}
